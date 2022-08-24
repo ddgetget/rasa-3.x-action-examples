@@ -32,5 +32,17 @@ python -m rasa run actions
 python -m rasa shell
 ```
 
+## BUG记录
+### 环境问题(Jina和tensorflow,tensorboard,tensorflow-hub,tensorflow-text不在同一个区间)
+```commandline
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+tensorflow 2.7.3 requires protobuf<3.20,>=3.9.2, but you have protobuf 3.0.0 which is incompatible.
+tensorflow-text 2.9.0 requires tensorflow<2.10,>=2.9.0; platform_machine != "arm64" or platform_system != "Darwin", but you have tensorflow 2.7.3 which is incompatible.
+tensorflow-hub 0.12.0 requires protobuf>=3.8.0, but you have protobuf 3.0.0 which is incompatible.
+tensorboard 2.10.0 requires protobuf<3.20,>=3.9.2, but you have protobuf 3.0.0 which is incompatible.
+jina 2.6.4 requires protobuf>=3.13.0, but you have protobuf 3.0.0 which is incompatible.
+```
+
 ## 参考资料
 1. [github-retreival-jina](https://github.com/RasaHQ/rasa-action-examples/tree/main/retreival-jina)
+2. [githut-Jina](https://github.com/jina-ai/jina)
