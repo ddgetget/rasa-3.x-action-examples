@@ -1,13 +1,18 @@
-import os
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @Time:    2022-08-26 16:13
+# @Author:  geng
+# @Email:   yonglonggeng@163.com
+# @WeChat:  superior_god
+# @File:    rasa_train.py
+# @Project: rasa-3.x-action-examples
+# @Package:
+# @Ref:
 
 import rasa
 
-from config import my_config
-
-os.environ['CUDA_VISIBLE_DEVICES'] = my_config.depend['rasa_run_cuda']
-
 rasa.train(
-    domain="config/domain.yml",
-    config="config/config.yml",
-    training_files="train_data",
+    domain="domain.yml",
+    config="config.yml",
+    training_files="data",
 )

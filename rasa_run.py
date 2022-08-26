@@ -1,15 +1,19 @@
-import os
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @Time:    2022-08-26 16:13
+# @Author:  geng
+# @Email:   yonglonggeng@163.com
+# @WeChat:  superior_god
+# @File:    rasa_run.py
+# @Project: rasa-3.x-action-examples
+# @Package:
+# @Ref:
+
 
 import rasa
 
-from config import my_config
-
-os.environ['CUDA_VISIBLE_DEVICES'] = my_config.depend['rasa_run_cuda']
-# MODEL_PATH = "models/" + my_config.depend['rasa_run_model']
-MODEL_PATH = "models/"
-
 rasa.run(
-    model=MODEL_PATH,
-    endpoints="config/endpoints.yml",
-    credentials="config/credentials.yml"
+    model="models/",
+    endpoints="endpoints.yml",
+    credentials="credentials.yml"
 )

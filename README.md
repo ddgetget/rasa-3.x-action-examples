@@ -21,3 +21,8 @@ for rasa-3.x-action-examples doc
 
 # 参考链接
 1. [rasa-page-actions](https://rasa.com/docs/rasa/actions/)
+
+
+## Actions
+
+当前触发`give time'意图,触发动作`action_show_time`,返回给用户当前时间
